@@ -4,4 +4,10 @@
     <string name="nb1">Puppy</string>
     <string name="Contacto">Contacto</string>
     <string name="About">Acerca de</string>
+    <string name="Developer">Nestor Cañas</string>
+    <string name="Bio">
+        Soy un estudiante de la carrera de Ciencias de la Computacion, Apasionado
+        por la programacion y siempre en la busqueda de mas conocimiento util y
+        sus formas de aplicarlo
+    </string>
 </resources>

@@ -16,16 +16,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".AppBar" />
-        <activity android:name=".Raiting"
-            android:parentActivityName=".MainActivity"
-            >
+        <activity
+            android:name=".Raiting"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                >
-
-            </meta-data>
+                android:value=".MainActivity"></meta-data>
         </activity>
+        <activity android:name=".DeveloperBio"></activity>
     </application>
 
 </manifest>

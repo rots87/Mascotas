@@ -55,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 cadena = "Has precionado el Item 1";
                 break;
             case R.id.mItem2:
-                cadena = "Has precionado el Item 2";
+                Intent i = new Intent(this,DeveloperBio.class);
+                startActivity(i);
                 break;
         }
         mensaje = Toast.makeText(getApplicationContext(),cadena,Toast.LENGTH_SHORT);
