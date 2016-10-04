@@ -2,4 +2,6 @@
     <string name="app_name">Petagram</string>
     <string name="n1">1</string>
     <string name="nb1">Puppy</string>
+    <string name="Contacto">Contacto</string>
+    <string name="About">Acerca de</string>
 </resources>
