@@ -76,8 +76,8 @@ public class Email extends Activity implements View.OnClickListener {
         protected String doInBackground(String... params){
             try{
                 Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress("ncanas87@gmail.com"));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(correo));
+                message.setFrom(new InternetAddress(correo));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("ncanas87@gmail.com"));
                 message.setSubject(asunto);
                 message.setContent(cuerpo,"text/html; charset=utf-8");
                 Transport.send(message);
