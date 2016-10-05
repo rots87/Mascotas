@@ -50,12 +50,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         Toast mensaje;
         String cadena = "";
+        Intent i;
         switch (item.getItemId()){
             case R.id.mItem1:
-                cadena = "Has precionado el Item 1";
+                i = new Intent(this,Email.class);
+                startActivity(i);
                 break;
             case R.id.mItem2:
-                Intent i = new Intent(this,DeveloperBio.class);
+                i = new Intent(this,DeveloperBio.class);
                 startActivity(i);
                 break;
         }
