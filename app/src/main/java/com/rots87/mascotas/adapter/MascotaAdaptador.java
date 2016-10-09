@@ -1,4 +1,4 @@
-package com.rots87.mascotas;
+package com.rots87.mascotas.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,6 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.rots87.mascotas.R;
+import com.rots87.mascotas.mascotas;
+
 import java.util.ArrayList;
 
 /**
