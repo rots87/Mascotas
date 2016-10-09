@@ -23,8 +23,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ArrayList<mascotas> mascotas;
-    private RecyclerView listamascotas;
+
     private Toolbar toolbar;
     private TabLayout tablayout;
     private ViewPager viewPager;
@@ -42,14 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(AppBar);
         setUpViewPager();
         /*
-        listamascotas = (RecyclerView) findViewById(R.id.rvMascotas);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-
-        listamascotas.setLayoutManager(llm);
-        InicioMascotas();
-        inicializarAdaptador();
 
         */
 
@@ -73,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(),agregarFragments()));
         tablayout.setupWithViewPager(viewPager);
 
+        tablayout.getTabAt(0).setIcon(R.drawable.home);
+        tablayout.getTabAt(1).setIcon(R.drawable.cat);
+
     }
 
     @Override
@@ -83,8 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Toast mensaje;
-        String cadena = "";
         Intent i;
         switch (item.getItemId()){
             case R.id.mItem1:
@@ -96,26 +89,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
         }
-        mensaje = Toast.makeText(getApplicationContext(),cadena,Toast.LENGTH_SHORT);
-        mensaje.show();
         return super.onOptionsItemSelected(item);
     }
 
-    public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
-        listamascotas.setAdapter(adaptador);
-    }
 
-    public void InicioMascotas(){
-        mascotas = new ArrayList<mascotas>();
-
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy",R.drawable.bone,R.drawable.bone2,"1"));
-        mascotas.add(new mascotas(R.drawable.kitty,"Kitty",R.drawable.bone,R.drawable.bone2,"2"));
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy2",R.drawable.bone,R.drawable.bone2,"3"));
-        mascotas.add(new mascotas(R.drawable.kitty,"Kitty2",R.drawable.bone,R.drawable.bone2,"4"));
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy3",R.drawable.bone,R.drawable.bone2,"5"));
-
-    }
 
 
     @Override
