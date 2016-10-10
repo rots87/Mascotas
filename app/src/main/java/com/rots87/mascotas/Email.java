@@ -60,7 +60,7 @@ public class Email extends Activity implements View.OnClickListener {
 
         session = Session.getDefaultInstance(props, new Authenticator() {
         protected PasswordAuthentication getPasswordAuthentication(){
-            return new PasswordAuthentication("ncanas87@gmail.com","rots*1687");
+            return new PasswordAuthentication("tmaildeveloper@gmail.com","master38");
         }
         });
 
@@ -76,8 +76,8 @@ public class Email extends Activity implements View.OnClickListener {
         protected String doInBackground(String... params){
             try{
                 Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress(correo));
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("ncanas87@gmail.com"));
+                message.setReplyTo(InternetAddress.parse(correo));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("courseraandroidtask@mailinator.com"));
                 message.setSubject(asunto);
                 message.setContent(cuerpo,"text/html; charset=utf-8");
                 Transport.send(message);
