@@ -57,18 +57,17 @@ public class Raiting extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Toast mensaje;
-        String cadena = "";
+        Intent i;
         switch (item.getItemId()){
             case R.id.mItem1:
-                cadena = "Has precionado el Item 1";
+                i = new Intent(this,Email.class);
+                startActivity(i);
                 break;
             case R.id.mItem2:
-                cadena = "Has precionado el Item 2";
+                i = new Intent(this,DeveloperBio.class);
+                startActivity(i);
                 break;
         }
-        mensaje = Toast.makeText(getApplicationContext(),cadena,Toast.LENGTH_SHORT);
-        mensaje.show();
         return super.onOptionsItemSelected(item);
     }
 
