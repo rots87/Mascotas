@@ -7,10 +7,6 @@
     tools:context="com.rots87.mascotas.Raiting"
     android:orientation="vertical">
 
-    <include android:id="@+id/AppBar"
-        layout="@layout/activity_app_bar"
-        ></include>
-
     <android.support.v7.widget.RecyclerView
         android:layout_width="200dp"
         android:layout_height="match_parent"

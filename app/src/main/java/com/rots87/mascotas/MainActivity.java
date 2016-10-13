@@ -5,12 +5,11 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
+
 
 import com.rots87.mascotas.adapter.PageAdapter;
 import com.rots87.mascotas.fragment.PerfilViewFragment;
@@ -18,10 +17,8 @@ import com.rots87.mascotas.fragment.ReciclerViewFragment;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-
-    private Toolbar toolbar;
     private TabLayout tablayout;
     private ViewPager viewPager;
 
@@ -30,20 +27,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setIcon(R.drawable.footprint);
+        actionBar.setDisplayShowHomeEnabled(true);
+
+
         tablayout = (TabLayout) findViewById(R.id.tabLayourt);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
-
-        Toolbar AppBar = (Toolbar) findViewById(R.id.AppBar);
-        setSupportActionBar(AppBar);
         setUpViewPager();
 
-        if (toolbar != null){
-            setSupportActionBar(toolbar);
-        }
 
-        ImageView Fav = (ImageView) findViewById(R.id.abFav);
-        Fav.setOnClickListener(this);
 
     }
 
@@ -73,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent i;
         switch (item.getItemId()){
+            case R.id.Fav:
+                i = new Intent(this,Raiting.class);
+                startActivity(i);
+                break;
             case R.id.mItem1:
                 i = new Intent(this,Email.class);
                 startActivity(i);
@@ -85,12 +82,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-
-
-
-    @Override
-    public void onClick(View view) {
-        Intent i = new Intent(this,Raiting.class);
-        startActivity(i);
-    }
 }
