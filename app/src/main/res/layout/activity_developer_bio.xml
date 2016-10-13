@@ -7,9 +7,6 @@
     tools:context="com.rots87.mascotas.DeveloperBio"
     android:orientation="vertical">
 
-    <include android:id="@+id/AppMenu"
-        layout="@layout/activity_app_bar"
-        ></include>
 
     <ImageView
         android:layout_width="150dp"

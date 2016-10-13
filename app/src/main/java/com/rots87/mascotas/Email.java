@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -24,7 +25,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class Email extends Activity implements View.OnClickListener {
+public class Email extends AppCompatActivity implements View.OnClickListener {
 
     Session session = null;
     ProgressDialog pdialog = null;
@@ -36,6 +37,9 @@ public class Email extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setIcon(R.drawable.footprint);
+        actionBar.setDisplayShowHomeEnabled(true);
         context = this;
         Button enviar = (Button) findViewById(R.id.btnEnviar);
         email = (EditText) findViewById(R.id.email);
