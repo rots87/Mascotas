@@ -5,6 +5,13 @@ Esta app para android se encuentra desarrollada usando como base la api 21 de an
 
 Este programa ha sido desarrollado por Rots87 siguiendo las clases vertidas en Coursera y respetando el Codigo de Honor proclamado por la misma. Este programa se encuentra protegido bajo la licencia MIT la cual puedes consultar en el siguiente [enlace](https://opensource.org/licenses/MIT "Licencia MIT").
 
+##Tareas en Semana 5
+- [ ] Crear la base de datos
+- [ ] Implementar la base de datos
+- [ ] Pruebas del Like
+- [ ] Mostrar Cambios en el raiting
+- [ ] Reordenacion del raiting
+
 ##Puntos a Evaluar
 ###Semana 3 (Completado)
 * Que corra el proyecto
