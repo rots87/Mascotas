@@ -25,6 +25,10 @@
         <android.support.v7.widget.RecyclerView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingStart="16dp"
             android:id="@+id/fotosmascotas"
             android:layout_gravity="center_horizontal"
             android:paddingTop="60dp"
