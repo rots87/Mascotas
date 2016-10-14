@@ -35,3 +35,23 @@ Estas 5 mascotas estarán cambiando conforme el usuario da rating a una o varias
 Crea un modelo de base de datos que contenga una tabla llamada mascota esta debe ser idéntica al POJO de mascota, de tal forma que cuando una persona de rating a una foto puedas guardar los datos completos de la entidad en la base de datos. Para fines de este ejercicio tu tabla solo estará guardando las últimas 5 mascotas con rating.
 
 ##Capturas de pantalla
+
+Pagina Principal:
+
+![Pagina Principal](/Images/index.png)
+
+Fragments y el TabLayout:
+
+![fragments](/Images/fragments.png)
+
+Preferencia de las Mascotas:
+
+![Preferencia](/Images/raiting.png)
+
+Bio:
+
+![Bio](/Images/Bio.png)
+
+Contactame:
+
+![Contactame](/Images/contactame.png)
