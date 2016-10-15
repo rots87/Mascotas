@@ -45,11 +45,10 @@ Crea un modelo de base de datos que contenga una tabla llamada mascota esta debe
 
 ##Capturas de pantalla
 
-Pagina Principal:
+![Base de Datos](/Images/db.png "Base de datos a implementar")
 
 ![Pagina Principal](/Images/index.png "Pagina principal del proyecto")
 ![fragments](/Images/fragments.png "Fragments y TabLayout")
 ![Preferencia](/Images/raiting.png "Raiting de las mascotas por su numero de like")
 ![Bio](/Images/Bio.png "Bio del programador")
 ![Contactame](/Images/contactame.png "Formulario de contacto")
-![Base de Datos](/Images/db.png "Base de datos a implementar")
