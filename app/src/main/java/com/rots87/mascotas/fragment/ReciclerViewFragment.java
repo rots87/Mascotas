@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * Created by rots on 10-09-16.
  */
 
-public class ReciclerViewFragment extends Fragment {
+public class ReciclerViewFragment extends Fragment implements RecyclerViewFragmentView {
     ArrayList<com.rots87.mascotas.mascotas> mascotas;
     private RecyclerView listamascotas;
 
@@ -31,18 +31,9 @@ public class ReciclerViewFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_reciclerview, container, false);
         listamascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
 
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
 
-        listamascotas.setLayoutManager(llm);
         InicioMascotas();
-        inicializarAdaptador();
         return v;
-    }
-
-    public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
-        listamascotas.setAdapter(adaptador);
     }
 
     public void InicioMascotas(){
@@ -53,6 +44,25 @@ public class ReciclerViewFragment extends Fragment {
         mascotas.add(new mascotas(R.drawable.puppy,"Puppy2",R.drawable.bone,R.drawable.bone2,"3"));
         mascotas.add(new mascotas(R.drawable.kitty,"Kitty2",R.drawable.bone,R.drawable.bone2,"4"));
         mascotas.add(new mascotas(R.drawable.puppy,"Puppy3",R.drawable.bone,R.drawable.bone2,"5"));
+
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listamascotas.setLayoutManager(llm);
+    }
+
+    @Override
+    public MascotaAdaptador crearAdaptador(ArrayList<mascotas> mascotas) {
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
+        return adaptador;
+    }
+
+    @Override
+    public void inicializarAdaptadorRV(MascotaAdaptador mascotas) {
+        listamascotas.setAdapter(mascotas);
 
     }
 }

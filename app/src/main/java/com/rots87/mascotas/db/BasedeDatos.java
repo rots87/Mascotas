@@ -44,5 +44,5 @@ public class BasedeDatos extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public Ar
+    //public Ar
 }
