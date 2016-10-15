@@ -43,4 +43,6 @@ public class BasedeDatos extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXIST " + ConstantesDB.TABLE_MASCOTASLIKES);
         onCreate(db);
     }
+
+    public Ar
 }

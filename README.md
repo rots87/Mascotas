@@ -6,6 +6,8 @@ Esta app para android se encuentra desarrollada usando como base la api 21 de an
 Este programa ha sido desarrollado por Rots87 siguiendo las clases vertidas en Coursera y respetando el Codigo de Honor proclamado por la misma. Este programa se encuentra protegido bajo la licencia MIT la cual puedes consultar en el siguiente [enlace](https://opensource.org/licenses/MIT "Licencia MIT").
 
 ##Tareas en Semana 5
+- [x] Diseño de BD para la aplicacion
+- [ ] Cambio de la estructura a MVP
 - [x] Crear la base de datos
 - [ ] Implementar la base de datos
 - [ ] Pruebas del Like
@@ -45,20 +47,9 @@ Crea un modelo de base de datos que contenga una tabla llamada mascota esta debe
 
 Pagina Principal:
 
-![Pagina Principal](/Images/index.png)
-
-Fragments y el TabLayout:
-
-![fragments](/Images/fragments.png)
-
-Preferencia de las Mascotas:
-
-![Preferencia](/Images/raiting.png)
-
-Bio:
-
-![Bio](/Images/Bio.png)
-
-Contactame:
-
-![Contactame](/Images/contactame.png)
+![Pagina Principal](/Images/index.png "Pagina principal del proyecto")
+![fragments](/Images/fragments.png "Fragments y TabLayout")
+![Preferencia](/Images/raiting.png "Raiting de las mascotas por su numero de like")
+![Bio](/Images/Bio.png "Bio del programador")
+![Contactame](/Images/contactame.png "Formulario de contacto")
+![Base de Datos](/Images/db.png "Base de datos a implementar")
