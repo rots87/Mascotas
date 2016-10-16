@@ -12,6 +12,10 @@ public class mascotas {
     private int ybone;
     private String numero;
 
+    public mascotas() {
+
+    }
+
     public int getFoto() {
         return foto;
     }

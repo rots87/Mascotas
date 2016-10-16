@@ -11,9 +11,11 @@ public final class ConstantesDB {
     public static final String TABLE_MASCOTAS_ID = "id";
     public static final String TABLE_MASCOTAS_NAME = "nombre";
     public static final String TABLE_MASCOTAS_PHOTO = "foto";
+    public static final String TABLE_MASCOTAS_YBONE = "ybone";
+    public static final String TABLE_MASCOTAS_WBONE = "wbone";
     public static final String TABLE_MASCOTASLIKES = "likes";
     public static final String TABLE_MASCOTASLIKES_ID = "id";
-    public static final String TABLE_MASCOTASLIKES_ID_CONTACTO = "id_contacto";
+    public static final String TABLE_MASCOTASLIKES_ID_CONTACTO = "idmascotas";
     public static final String TABLE_MASCOTASLIKES_LIKES = "likes";
 
 
