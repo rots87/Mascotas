@@ -6,6 +6,7 @@ package com.rots87.mascotas;
 
 public class mascotas {
 
+    private int id;
     private int foto;
     private String Nombre;
     private int wbone;
@@ -64,4 +65,11 @@ public class mascotas {
         this.numero = numero;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

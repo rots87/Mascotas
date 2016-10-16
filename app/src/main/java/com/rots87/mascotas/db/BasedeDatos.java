@@ -76,4 +76,27 @@ public class BasedeDatos extends SQLiteOpenHelper {
         db.insert(ConstantesDB.TABLE_MASCOTAS,null,contentValues);
         db.close();
     }
+
+    public void insertarLikeMascotas(ContentValues contentValues){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.insert(ConstantesDB.TABLE_MASCOTASLIKES_LIKES,null,contentValues);
+        db.close();
+    }
+
+    public int obtenerLikesMascotas(mascotas mascota){
+        int likes = 0;
+
+        String query = "SELECT COUNT (" + ConstantesDB.TABLE_MASCOTASLIKES_LIKES + ")"+
+                " FROM " + ConstantesDB.TABLE_MASCOTASLIKES +
+                " WHERE " + ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO + "="+mascota.getId();
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor registros = db.rawQuery(query,null);
+
+        while (registros.moveToNext()){
+            likes = registros.getInt(0);
+        };
+
+        return likes;
+    }
 }

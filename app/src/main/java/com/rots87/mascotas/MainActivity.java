@@ -9,6 +9,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import com.rots87.mascotas.adapter.PageAdapter;
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         tablayout = (TabLayout) findViewById(R.id.tabLayourt);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+
+
+
         setUpViewPager();
 
 
@@ -81,5 +85,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
 }

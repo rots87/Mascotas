@@ -13,22 +13,15 @@ import java.util.ArrayList;
  */
 
 public class ConstructorMascotas {
+    private static final int LIKE = 1;
     private Context context;
     public ConstructorMascotas(Context context) {
         this.context = context;
     }
 
     public ArrayList<mascotas> obtenerDatos(){
-        /*ArrayList<mascotas> mascotas = new ArrayList<>();
-
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy",R.drawable.bone,R.drawable.bone2,"1"));
-        mascotas.add(new mascotas(R.drawable.kitty,"Kitty",R.drawable.bone,R.drawable.bone2,"2"));
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy2",R.drawable.bone,R.drawable.bone2,"3"));
-        mascotas.add(new mascotas(R.drawable.kitty,"Kitty2",R.drawable.bone,R.drawable.bone2,"4"));
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy3",R.drawable.bone,R.drawable.bone2,"5"));
-        return mascotas;*/
         BasedeDatos db = new BasedeDatos(context);
-        insertarCincoMascotas(db);
+        //insertarCincoMascotas(db);
         return db.obtenerTodasLasMascotas();
     }
 
@@ -60,5 +53,18 @@ public class ConstructorMascotas {
         contentValues.put(ConstantesDB.TABLE_MASCOTAS_WBONE,R.drawable.bone);
         db.insertarMascotas(contentValues);
 
+    }
+
+    public void darLike(mascotas mascota){
+        BasedeDatos db = new BasedeDatos(context);
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO,mascota.getId());
+        contentValues.put(ConstantesDB.TABLE_MASCOTASLIKES_LIKES,LIKE);
+        db.insertarLikeMascotas(contentValues);
+    }
+
+    public int obtenerLikesMascotas(mascotas mascota){
+        BasedeDatos db = new BasedeDatos(context);
+        return  db.obtenerLikesMascotas(mascota);
     }
 }

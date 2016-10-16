@@ -8,8 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rots87.mascotas.R;
+import com.rots87.mascotas.db.ConstructorMascotas;
 import com.rots87.mascotas.mascotas;
 
 import java.util.ArrayList;
@@ -36,15 +38,24 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
     }
 
     @Override
-    public void onBindViewHolder(MascotasViewHolder mascotasViewHolder, int position) {
-        mascotas pet = mascota.get(position);
+    public void onBindViewHolder(final MascotasViewHolder mascotasViewHolder, int position) {
+        final mascotas pet = mascota.get(position);
         mascotasViewHolder.foto.setImageResource(pet.getFoto());
         mascotasViewHolder.nombre.setText(pet.getNombre());
         mascotasViewHolder.numero.setText(pet.getNumero());
         mascotasViewHolder.bone.setImageResource(pet.getWbone());
         mascotasViewHolder.ybone.setImageResource(pet.getYbone());
 
+        mascotasViewHolder.ybone.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Hola" + pet.getNombre(), Toast.LENGTH_SHORT).show();
+                ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
+                constructorMascotas.darLike(pet);
+                mascotasViewHolder.numero.setText(constructorMascotas.obtenerLikesMascotas(pet));
 
+            }
+        });
     }
 
     @Override
