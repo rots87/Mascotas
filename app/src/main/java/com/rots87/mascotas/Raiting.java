@@ -66,7 +66,7 @@ public class Raiting extends AppCompatActivity {
     }
 
     public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas, this);
         listamascotas.setAdapter(adaptador);
     }
 

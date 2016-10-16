@@ -1,5 +1,7 @@
 package com.rots87.mascotas.adapter;
 
+import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +21,12 @@ import java.util.ArrayList;
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotasViewHolder> {
 
     ArrayList<mascotas> mascota;
+    Activity activity;
 
-    public MascotaAdaptador (ArrayList<mascotas> pets){
-        this.mascota = pets;
+
+    public MascotaAdaptador(ArrayList<mascotas> mascota, Activity activity){
+        this.mascota = mascota;
+        this.activity = activity;
     }
 
     @Override

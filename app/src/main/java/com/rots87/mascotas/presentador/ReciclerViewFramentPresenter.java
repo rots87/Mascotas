@@ -1,8 +1,7 @@
 package com.rots87.mascotas.presentador;
 
 import android.content.Context;
-
-import com.rots87.mascotas.adapter.MascotaAdaptador;
+import com.rots87.mascotas.db.ConstructorMascotas;
 import com.rots87.mascotas.fragment.RecyclerViewFragmentView;
 import com.rots87.mascotas.mascotas;
 
@@ -16,19 +15,25 @@ public class ReciclerViewFramentPresenter implements IRecyclerViewFragmentPresen
 
     private RecyclerViewFragmentView iRecyclerViewFragmentView;
     private Context context;
+    private ConstructorMascotas constructorMascotas;
+    private ArrayList<mascotas> mascota;
 
     public ReciclerViewFramentPresenter(RecyclerViewFragmentView iRecyclerViewFragmentView, Context context) {
         this.iRecyclerViewFragmentView = iRecyclerViewFragmentView;
         this.context = context;
+        obtenerMascotasDB();
     }
 
     @Override
     public void obtenerMascotasDB() {
-
+        constructorMascotas = new ConstructorMascotas(context);
+        mascota = constructorMascotas.obtenerDatos();
+        mostrarMascotasRV();
     }
 
     @Override
     public void mostrarMascotasRV() {
-
+        iRecyclerViewFragmentView.inicializarAdaptadorRV(iRecyclerViewFragmentView.crearAdaptador(mascota));
+        iRecyclerViewFragmentView.generarLinearLayoutVertical();
     }
 }

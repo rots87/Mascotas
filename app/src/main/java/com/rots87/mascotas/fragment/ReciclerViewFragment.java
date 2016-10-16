@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import com.rots87.mascotas.R;
 import com.rots87.mascotas.adapter.MascotaAdaptador;
 import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.presentador.IRecyclerViewFragmentPresenter;
+import com.rots87.mascotas.presentador.ReciclerViewFramentPresenter;
 
 import java.util.ArrayList;
 
@@ -20,8 +22,9 @@ import java.util.ArrayList;
  */
 
 public class ReciclerViewFragment extends Fragment implements RecyclerViewFragmentView {
-    ArrayList<com.rots87.mascotas.mascotas> mascotas;
+    private ArrayList<mascotas> mascota;
     private RecyclerView listamascotas;
+    private IRecyclerViewFragmentPresenter presenter;
 
     @Nullable
     @Override
@@ -30,22 +33,11 @@ public class ReciclerViewFragment extends Fragment implements RecyclerViewFragme
         //return super.onCreateView(inflater, container, savedInstanceState);
         View v = inflater.inflate(R.layout.fragment_reciclerview, container, false);
         listamascotas = (RecyclerView) v.findViewById(R.id.rvMascotas);
-
-
-        InicioMascotas();
+        presenter = new ReciclerViewFramentPresenter(this, getContext());
         return v;
     }
 
-    public void InicioMascotas(){
-        mascotas = new ArrayList<mascotas>();
 
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy",R.drawable.bone,R.drawable.bone2,"1"));
-        mascotas.add(new mascotas(R.drawable.kitty,"Kitty",R.drawable.bone,R.drawable.bone2,"2"));
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy2",R.drawable.bone,R.drawable.bone2,"3"));
-        mascotas.add(new mascotas(R.drawable.kitty,"Kitty2",R.drawable.bone,R.drawable.bone2,"4"));
-        mascotas.add(new mascotas(R.drawable.puppy,"Puppy3",R.drawable.bone,R.drawable.bone2,"5"));
-
-    }
 
     @Override
     public void generarLinearLayoutVertical() {
@@ -56,7 +48,7 @@ public class ReciclerViewFragment extends Fragment implements RecyclerViewFragme
 
     @Override
     public MascotaAdaptador crearAdaptador(ArrayList<mascotas> mascotas) {
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas);
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,getActivity());
         return adaptador;
     }
 
