@@ -1,7 +1,6 @@
 package com.rots87.mascotas.adapter;
 
 import android.app.Activity;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,7 +48,6 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         mascotasViewHolder.ybone.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, "Hola" + pet.getNumero(), Toast.LENGTH_SHORT).show();
                 ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
                 constructorMascotas.darLike(pet);
                 String flag = String.valueOf(constructorMascotas.obtenerLikesMascotas(pet));
