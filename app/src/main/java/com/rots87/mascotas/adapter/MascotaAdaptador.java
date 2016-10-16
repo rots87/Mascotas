@@ -42,17 +42,21 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         final mascotas pet = mascota.get(position);
         mascotasViewHolder.foto.setImageResource(pet.getFoto());
         mascotasViewHolder.nombre.setText(pet.getNombre());
-        mascotasViewHolder.numero.setText(pet.getNumero());
+        mascotasViewHolder.numero.setText(String.valueOf(pet.getNumero()));
         mascotasViewHolder.bone.setImageResource(pet.getWbone());
         mascotasViewHolder.ybone.setImageResource(pet.getYbone());
 
         mascotasViewHolder.ybone.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, "Hola" + pet.getNombre(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, "Hola" + pet.getNumero(), Toast.LENGTH_SHORT).show();
                 ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
                 constructorMascotas.darLike(pet);
-                mascotasViewHolder.numero.setText(constructorMascotas.obtenerLikesMascotas(pet));
+                String flag = String.valueOf(constructorMascotas.obtenerLikesMascotas(pet));
+                if (flag==null){
+                    flag = "0";
+                }
+                mascotasViewHolder.numero.setText(flag);
 
             }
         });
@@ -70,6 +74,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         private TextView nombre;
         private TextView numero;
         private ImageView ybone;
+
 
         public MascotasViewHolder(View itemView) {
             super(itemView);

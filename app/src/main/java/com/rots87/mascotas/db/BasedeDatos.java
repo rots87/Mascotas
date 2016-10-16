@@ -35,7 +35,7 @@ public class BasedeDatos extends SQLiteOpenHelper {
                                         ")";
 
         String queryCrearTabMascotasLikes = "CREATE TABLE " + ConstantesDB.TABLE_MASCOTASLIKES + "("+
-                                        ConstantesDB.TABLE_MASCOTASLIKES_ID             + " INTEGER PRIMERY KEY, " +
+                                        ConstantesDB.TABLE_MASCOTASLIKES_ID             + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                                         ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO    + " INTEGER, " +
                                         ConstantesDB.TABLE_MASCOTASLIKES_LIKES          + " INTEGER, " +
                                         " FOREIGN KEY ("+ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO + ")" +
@@ -61,13 +61,24 @@ public class BasedeDatos extends SQLiteOpenHelper {
 
         while(registros.moveToNext()){
             mascotas mascotaActual = new mascotas();
+            mascotaActual.setId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(1));
             mascotaActual.setFoto(registros.getInt(2));
             mascotaActual.setYbone(registros.getInt(3));
             mascotaActual.setWbone(registros.getInt(4));
+            mascotaActual.setWbone(registros.getInt(4));
+            String query2 = "SELECT COUNT (" + ConstantesDB.TABLE_MASCOTASLIKES_LIKES + ")"+
+                    " FROM " + ConstantesDB.TABLE_MASCOTASLIKES +
+                    " WHERE " + ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO + "="+mascotaActual.getId();
+            Cursor registros2 = db.rawQuery(query2,null);
+
+            while (registros2.moveToNext()){
+                mascotaActual.setNumero(String.valueOf(registros2.getInt(0)));
+            }
             mascota.add(mascotaActual);
         }
         db.close();
+
         return mascota;
     }
 
@@ -79,7 +90,7 @@ public class BasedeDatos extends SQLiteOpenHelper {
 
     public void insertarLikeMascotas(ContentValues contentValues){
         SQLiteDatabase db = this.getWritableDatabase();
-        db.insert(ConstantesDB.TABLE_MASCOTASLIKES_LIKES,null,contentValues);
+        db.insert(ConstantesDB.TABLE_MASCOTASLIKES,null,contentValues);
         db.close();
     }
 
@@ -95,8 +106,14 @@ public class BasedeDatos extends SQLiteOpenHelper {
 
         while (registros.moveToNext()){
             likes = registros.getInt(0);
-        };
+        }
 
-        return likes;
+        if (likes != 0){
+            return likes;
+        }else {
+            return 0;
+        }
+
+
     }
 }

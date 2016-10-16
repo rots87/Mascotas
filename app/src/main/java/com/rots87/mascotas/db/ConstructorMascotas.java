@@ -21,7 +21,7 @@ public class ConstructorMascotas {
 
     public ArrayList<mascotas> obtenerDatos(){
         BasedeDatos db = new BasedeDatos(context);
-        //insertarCincoMascotas(db);
+        //insertarCincoMascotas(db); //Use solo cuando es la primera vez que ejecuta la app
         return db.obtenerTodasLasMascotas();
     }
 
@@ -61,6 +61,7 @@ public class ConstructorMascotas {
         contentValues.put(ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO,mascota.getId());
         contentValues.put(ConstantesDB.TABLE_MASCOTASLIKES_LIKES,LIKE);
         db.insertarLikeMascotas(contentValues);
+
     }
 
     public int obtenerLikesMascotas(mascotas mascota){
