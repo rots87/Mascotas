@@ -7,11 +7,11 @@ Este programa ha sido desarrollado por Rots87 siguiendo las clases vertidas en C
 
 ##Tareas en Semana 5
 - [x] Diseño de BD para la aplicacion
-- [ ] Cambio de la estructura a MVP
+- [x] Cambio de la estructura a MVP
 - [x] Crear la base de datos
-- [ ] Implementar la base de datos
-- [ ] Pruebas del Like
-- [ ] Mostrar Cambios en el raiting
+- [x] Implementar la base de datos
+- [x] Pruebas del Like
+- [x] Mostrar Cambios en el raiting
 - [ ] Reordenacion del raiting
 
 ##Puntos a Evaluar
