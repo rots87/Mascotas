@@ -12,7 +12,8 @@ Este programa ha sido desarrollado por Rots87 siguiendo las clases vertidas en C
 - [x] Implementar la base de datos
 - [x] Pruebas del Like
 - [x] Mostrar Cambios en el raiting
-- [ ] Reordenacion del raiting
+
+#*Para dar Like por favor dar clic en el hueso amarillo*
 
 ##Puntos a Evaluar
 ###Semana 3 (Completado)
