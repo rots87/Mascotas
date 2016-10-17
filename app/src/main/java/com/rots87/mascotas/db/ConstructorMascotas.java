@@ -21,7 +21,7 @@ public class ConstructorMascotas {
 
     public ArrayList<mascotas> obtenerDatos(){
         BasedeDatos db = new BasedeDatos(context);
-        //insertarCincoMascotas(db); //Use solo cuando es la primera vez que ejecuta la app
+        insertarCincoMascotas(db); //Use solo cuando es la primera vez que ejecuta la app
         return db.obtenerTodasLasMascotas();
     }
 
