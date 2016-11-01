@@ -5,14 +5,14 @@ Esta app para android se encuentra desarrollada usando como base la api 21 de an
 
 Este programa ha sido desarrollado por Rots87 siguiendo las clases vertidas en Coursera y respetando el Codigo de Honor proclamado por la misma. Este programa se encuentra protegido bajo la licencia MIT la cual puedes consultar en el siguiente [enlace](https://opensource.org/licenses/MIT "Licencia MIT").
 
-## Curso 3 Finalizado
+# Curso 3 Finalizado
 
-##Curso 4
-#Semana 1
-[x] Hacer la cuenta de Instragram como developer y obtener el token
-[ ] Implementar la nueva vista para gestionar los usuarios
-[ ] Adaptar la api de RETROFIT al sistema
-[ ] Pruebas
+#Curso 4
+##Semana 1
+- [x] Hacer la cuenta de Instragram como developer y obtener el token
+- [ ] Implementar la nueva vista para gestionar los usuarios
+- [ ] Adaptar la api de RETROFIT al sistema
+- [ ] Pruebas
 
 ##Capturas de pantalla
 
