@@ -10,7 +10,7 @@ Este programa ha sido desarrollado por Rots87 siguiendo las clases vertidas en C
 #Curso 4
 ##Semana 1
 - [x] Hacer la cuenta de Instragram como developer y obtener el token
-- [ ] Implementar la nueva vista para gestionar los usuarios
+- [x] Implementar la nueva vista para gestionar los usuarios
 - [ ] Adaptar la api de RETROFIT al sistema
 - [ ] Pruebas
 

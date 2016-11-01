@@ -6,4 +6,5 @@
     <dimen name="AppBar">4dp</dimen>
     <dimen name="iconSize">1dp</dimen>
     <dimen name="cardviewradius">4dp</dimen>
+    <dimen name="Titulo">48dp</dimen>
 </resources>
