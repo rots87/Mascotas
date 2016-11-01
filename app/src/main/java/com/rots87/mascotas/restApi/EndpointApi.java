@@ -5,4 +5,7 @@ package com.rots87.mascotas.restApi;
  */
 
 public interface EndpointApi {
+
+    //Get the most recent media published by the owner of the access_token.
+    getRecentMedia();
 }
