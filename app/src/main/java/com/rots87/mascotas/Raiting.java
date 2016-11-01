@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.rots87.mascotas.adapter.PageAdapter;
 
 import com.rots87.mascotas.fragment.ReciclerViewFragment;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 
 public class Raiting extends AppCompatActivity {
 
-    ArrayList<mascotas> mascotas;
+    ArrayList<com.rots87.mascotas.Pojo.mascotas> mascotas;
     private ViewPager viewPager;
 
     @Override

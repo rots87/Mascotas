@@ -7,5 +7,8 @@ package com.rots87.mascotas.presentador;
 public interface IRecyclerViewFragmentPresenter {
 
     public void obtenerMascotasDB();
+
+    void obtenerMediosRecientes();
+
     public void mostrarMascotasRV();
 }

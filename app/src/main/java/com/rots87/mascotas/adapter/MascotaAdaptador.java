@@ -7,11 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.rots87.mascotas.R;
 import com.rots87.mascotas.db.ConstructorMascotas;
-import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.Pojo.mascotas;
 
 import java.util.ArrayList;
 

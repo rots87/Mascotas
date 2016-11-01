@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.rots87.mascotas.R;
 import com.rots87.mascotas.adapter.MascotaAdaptador;
-import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.Pojo.mascotas;
 import com.rots87.mascotas.presentador.IRecyclerViewFragmentPresenter;
 import com.rots87.mascotas.presentador.ReciclerViewFramentPresenter;
 

@@ -3,7 +3,7 @@ package com.rots87.mascotas.presentador;
 import android.content.Context;
 import com.rots87.mascotas.db.ConstructorMascotas;
 import com.rots87.mascotas.fragment.RecyclerViewFragmentView;
-import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.Pojo.mascotas;
 
 import java.util.ArrayList;
 
@@ -21,7 +21,8 @@ public class ReciclerViewFramentPresenter implements IRecyclerViewFragmentPresen
     public ReciclerViewFramentPresenter(RecyclerViewFragmentView iRecyclerViewFragmentView, Context context) {
         this.iRecyclerViewFragmentView = iRecyclerViewFragmentView;
         this.context = context;
-        obtenerMascotasDB();
+        //obtenerMascotasDB();
+        obtenerMediosRecientes();
     }
 
     @Override
@@ -29,6 +30,11 @@ public class ReciclerViewFramentPresenter implements IRecyclerViewFragmentPresen
         constructorMascotas = new ConstructorMascotas(context);
         mascota = constructorMascotas.obtenerDatos();
         mostrarMascotasRV();
+    }
+
+    @Override
+    public void obtenerMediosRecientes() {
+        
     }
 
     @Override

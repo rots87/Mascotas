@@ -4,7 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 
 import com.rots87.mascotas.R;
-import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.Pojo.mascotas;
 
 import java.util.ArrayList;
 

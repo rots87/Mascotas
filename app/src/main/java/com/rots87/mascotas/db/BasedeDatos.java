@@ -1,13 +1,12 @@
 package com.rots87.mascotas.db;
 
-import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.Pojo.mascotas;
 
 import java.util.ArrayList;
 

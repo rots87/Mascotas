@@ -1,6 +1,6 @@
 package com.rots87.mascotas.restApi.model;
 
-import com.rots87.mascotas.mascotas;
+import com.rots87.mascotas.Pojo.mascotas;
 
 import java.util.ArrayList;
 

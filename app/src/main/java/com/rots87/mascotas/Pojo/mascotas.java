@@ -1,4 +1,4 @@
-package com.rots87.mascotas;
+package com.rots87.mascotas.Pojo;
 
 /**
  * Created by rots on 10-02-16.
