@@ -1,6 +1,7 @@
 package com.rots87.mascotas;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -75,8 +76,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
                 break;
             case R.id.mItem1:
-                i = new Intent(this,Email.class);
-                startActivity(i);
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+                intent.putExtra(Intent.EXTRA_EMAIL, "ncanas87@gmail.com");
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Prueba");
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
                 break;
             case R.id.mItem2:
                 i = new Intent(this,DeveloperBio.class);
