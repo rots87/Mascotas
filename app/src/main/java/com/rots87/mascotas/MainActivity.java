@@ -88,6 +88,11 @@ public class MainActivity extends AppCompatActivity {
                 i = new Intent(this,DeveloperBio.class);
                 startActivity(i);
                 break;
+
+            case R.id.mItem3:
+                i = new Intent(this,usuario.class);
+                startActivity(i);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

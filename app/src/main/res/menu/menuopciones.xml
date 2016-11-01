@@ -16,4 +16,8 @@
     <item android:id="@+id/mItem2"
         android:title="@string/About"
         ></item>
+    <item
+        android:id="@+id/mItem3"
+        android:title="Configurar Cuenta">
+    </item>
 </menu>
