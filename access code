@@ -1,0 +1,27 @@
+https://api.instagram.com/oauth/authorize/?client_id=71c54cc19ab34a649ec07a6656c3e2d5&redirect_uri=https://github.com/rots87/Mascotas&response_type=code&scope=basic+likes+comments+follower_list+relationships+public_content
+
+client_id: 71c54cc19ab34a649ec07a6656c3e2d5
+support email: ncanas87@gmail.com
+cliente status: Sandbox Mode
+
+URI: https://github.com/rots87/Mascotas
+
+code: 58eda2e7d895455a84aea65e34bae49a
+
+curl -F 'client_id=71c54cc19ab34a649ec07a6656c3e2d5' \
+    -F 'client_secret=4b9b7378d8404d668c1813b55d8317dc' \
+    -F 'grant_type=authorization_code' \
+    -F 'redirect_uri=https://github.com/rots87/Mascotas' \
+    -F 'code=58eda2e7d895455a84aea65e34bae49a' \
+    https://api.instagram.com/oauth/access_token
+
+{"access_token": "222850802.71c54cc.82e1f0f864cb41a58e299c83e6cab437", 
+"user": {
+  "username": "rotsen87",
+  "bio": "",
+  "website": "",
+  "profile_picture": "http://scontent-gru2-1.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg",
+  "full_name": "",
+  "id": "222850802"
+  }
+}
