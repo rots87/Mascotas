@@ -62,7 +62,7 @@ public class BasedeDatos extends SQLiteOpenHelper {
             Mascotas mascotaActual = new Mascotas();
             mascotaActual.setId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(1));
-            mascotaActual.setFoto(registros.getInt(2));
+            mascotaActual.setFoto(Integer.toString(registros.getInt(2)));
             mascotaActual.setYbone(registros.getInt(3));
             mascotaActual.setWbone(registros.getInt(4));
             mascotaActual.setWbone(registros.getInt(4));
@@ -72,7 +72,7 @@ public class BasedeDatos extends SQLiteOpenHelper {
             Cursor registros2 = db.rawQuery(query2,null);
 
             while (registros2.moveToNext()){
-                mascotaActual.setNumero(String.valueOf(registros2.getInt(0)));
+                mascotaActual.setNumero(registros2.getInt(0));
             }
             mascota.add(mascotaActual);
         }

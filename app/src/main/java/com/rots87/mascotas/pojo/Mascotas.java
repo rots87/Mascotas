@@ -7,21 +7,21 @@ package com.rots87.mascotas.pojo;
 public class Mascotas {
 
     private int id;
-    private int foto;
+    private String foto;
     private String Nombre;
     private int wbone;
     private int ybone;
-    private String numero;
+    private int numero;
 
     public Mascotas() {
 
     }
 
-    public int getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(int foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 
@@ -49,15 +49,15 @@ public class Mascotas {
         this.ybone = ybone;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    public Mascotas(int foto, String Nombre, int wbone, int ybone, String numero){
+    public Mascotas(String foto, String Nombre, int wbone, int ybone, int numero){
         this.foto = foto;
         this.Nombre = Nombre;
         this.wbone = wbone;
