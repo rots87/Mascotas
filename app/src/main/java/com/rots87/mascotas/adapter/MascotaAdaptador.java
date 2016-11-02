@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.rots87.mascotas.R;
 import com.rots87.mascotas.db.ConstructorMascotas;
-import com.rots87.mascotas.Pojo.mascotas;
+import com.rots87.mascotas.pojo.Mascotas;
 
 import java.util.ArrayList;
 
@@ -20,11 +20,11 @@ import java.util.ArrayList;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotasViewHolder> {
 
-    ArrayList<mascotas> mascota;
+    ArrayList<Mascotas> mascota;
     Activity activity;
 
 
-    public MascotaAdaptador(ArrayList<mascotas> mascota, Activity activity){
+    public MascotaAdaptador(ArrayList<Mascotas> mascota, Activity activity){
         this.mascota = mascota;
         this.activity = activity;
     }
@@ -37,7 +37,7 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
 
     @Override
     public void onBindViewHolder(final MascotasViewHolder mascotasViewHolder, int position) {
-        final mascotas pet = mascota.get(position);
+        final Mascotas pet = mascota.get(position);
         mascotasViewHolder.foto.setImageResource(pet.getFoto());
         mascotasViewHolder.nombre.setText(pet.getNombre());
         mascotasViewHolder.numero.setText(String.valueOf(pet.getNumero()));

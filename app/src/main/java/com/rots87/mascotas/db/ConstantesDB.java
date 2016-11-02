@@ -5,9 +5,9 @@ package com.rots87.mascotas.db;
  */
 
 public final class ConstantesDB {
-    public static final String DATABASE_NAME = "mascotas";
+    public static final String DATABASE_NAME = "Mascotas";
     public static final int DATAVASE_VERSION = 1;
-    public static final String TABLE_MASCOTAS = "mascotas";
+    public static final String TABLE_MASCOTAS = "Mascotas";
     public static final String TABLE_MASCOTAS_ID = "id";
     public static final String TABLE_MASCOTAS_NAME = "nombre";
     public static final String TABLE_MASCOTAS_PHOTO = "foto";

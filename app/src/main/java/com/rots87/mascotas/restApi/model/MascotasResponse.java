@@ -1,6 +1,6 @@
 package com.rots87.mascotas.restApi.model;
 
-import com.rots87.mascotas.Pojo.mascotas;
+import com.rots87.mascotas.pojo.Mascotas;
 
 import java.util.ArrayList;
 
@@ -9,13 +9,13 @@ import java.util.ArrayList;
  */
 
 public class MascotasResponse {
-    ArrayList<mascotas> mascota;
+    ArrayList<Mascotas> mascota;
 
-    public ArrayList<mascotas> getMascota() {
+    public ArrayList<Mascotas> getMascota() {
         return mascota;
     }
 
-    public void setMascota(ArrayList<mascotas> mascota) {
+    public void setMascota(ArrayList<Mascotas> mascota) {
         this.mascota = mascota;
     }
 }

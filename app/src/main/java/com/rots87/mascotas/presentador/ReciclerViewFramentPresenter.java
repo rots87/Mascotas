@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import com.rots87.mascotas.db.ConstructorMascotas;
 import com.rots87.mascotas.fragment.RecyclerViewFragmentView;
-import com.rots87.mascotas.Pojo.mascotas;
+import com.rots87.mascotas.pojo.Mascotas;
 import com.rots87.mascotas.restApi.Adapter.RestApiAdapter;
 import com.rots87.mascotas.restApi.EndpointApi;
 import com.rots87.mascotas.restApi.model.MascotasResponse;
@@ -26,7 +26,7 @@ public class ReciclerViewFramentPresenter implements IRecyclerViewFragmentPresen
     private RecyclerViewFragmentView iRecyclerViewFragmentView;
     private Context context;
     private ConstructorMascotas constructorMascotas;
-    private ArrayList<mascotas> mascota;
+    private ArrayList<Mascotas> mascota;
 
     public ReciclerViewFramentPresenter(RecyclerViewFragmentView iRecyclerViewFragmentView, Context context) {
         this.iRecyclerViewFragmentView = iRecyclerViewFragmentView;
@@ -59,12 +59,11 @@ public class ReciclerViewFramentPresenter implements IRecyclerViewFragmentPresen
 
             @Override
             public void onFailure(Call<MascotasResponse> call, Throwable t) {
-                Toast.makeText(context,"Error, intenta de nuevo",Toast.LENGTH_LONG);
-                Log.e("Error",t.toString());
+                Toast.makeText(context, "Error, intenta de nuevo", Toast.LENGTH_LONG);
+                Log.e("Error", t.toString());
             }
         });
     }
-
     @Override
     public void mostrarMascotasRV() {
         iRecyclerViewFragmentView.inicializarAdaptadorRV(iRecyclerViewFragmentView.crearAdaptador(mascota));

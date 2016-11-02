@@ -1,10 +1,10 @@
-package com.rots87.mascotas.Pojo;
+package com.rots87.mascotas.pojo;
 
 /**
  * Created by rots on 10-02-16.
  */
 
-public class mascotas {
+public class Mascotas {
 
     private int id;
     private int foto;
@@ -13,7 +13,7 @@ public class mascotas {
     private int ybone;
     private String numero;
 
-    public mascotas() {
+    public Mascotas() {
 
     }
 
@@ -57,7 +57,7 @@ public class mascotas {
         this.numero = numero;
     }
 
-    public mascotas(int foto, String Nombre, int wbone, int ybone, String numero){
+    public Mascotas(int foto, String Nombre, int wbone, int ybone, String numero){
         this.foto = foto;
         this.Nombre = Nombre;
         this.wbone = wbone;

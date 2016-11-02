@@ -12,12 +12,13 @@ import android.view.MenuItem;
 import com.rots87.mascotas.adapter.PageAdapter;
 
 import com.rots87.mascotas.fragment.ReciclerViewFragment;
+import com.rots87.mascotas.pojo.Mascotas;
 
 import java.util.ArrayList;
 
 public class Raiting extends AppCompatActivity {
 
-    ArrayList<com.rots87.mascotas.Pojo.mascotas> mascotas;
+    ArrayList<Mascotas> mascotas;
     private ViewPager viewPager;
 
     @Override

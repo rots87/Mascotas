@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.rots87.mascotas.Pojo.mascotas;
+import com.rots87.mascotas.pojo.Mascotas;
 
 import java.util.ArrayList;
 
@@ -52,14 +52,14 @@ public class BasedeDatos extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public ArrayList<mascotas> obtenerTodasLasMascotas(){
-        ArrayList <mascotas> mascota = new ArrayList<>();
+    public ArrayList<Mascotas> obtenerTodasLasMascotas(){
+        ArrayList <Mascotas> mascota = new ArrayList<>();
         String query = "SELECT * FROM "+ ConstantesDB.TABLE_MASCOTAS;
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor registros = db.rawQuery(query, null);
 
         while(registros.moveToNext()){
-            mascotas mascotaActual = new mascotas();
+            Mascotas mascotaActual = new Mascotas();
             mascotaActual.setId(registros.getInt(0));
             mascotaActual.setNombre(registros.getString(1));
             mascotaActual.setFoto(registros.getInt(2));
@@ -93,7 +93,7 @@ public class BasedeDatos extends SQLiteOpenHelper {
         db.close();
     }
 
-    public int obtenerLikesMascotas(mascotas mascota){
+    public int obtenerLikesMascotas(Mascotas mascota){
         int likes = 0;
 
         String query = "SELECT COUNT (" + ConstantesDB.TABLE_MASCOTASLIKES_LIKES + ")"+

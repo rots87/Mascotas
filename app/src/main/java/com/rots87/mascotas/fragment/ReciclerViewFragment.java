@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 
 import com.rots87.mascotas.R;
 import com.rots87.mascotas.adapter.MascotaAdaptador;
-import com.rots87.mascotas.Pojo.mascotas;
+import com.rots87.mascotas.pojo.Mascotas;
 import com.rots87.mascotas.presentador.IRecyclerViewFragmentPresenter;
 import com.rots87.mascotas.presentador.ReciclerViewFramentPresenter;
 
@@ -22,7 +22,7 @@ import java.util.ArrayList;
  */
 
 public class ReciclerViewFragment extends Fragment implements RecyclerViewFragmentView {
-    private ArrayList<mascotas> mascota;
+    private ArrayList<Mascotas> mascota;
     private RecyclerView listamascotas;
     private IRecyclerViewFragmentPresenter presenter;
 
@@ -47,7 +47,7 @@ public class ReciclerViewFragment extends Fragment implements RecyclerViewFragme
     }
 
     @Override
-    public MascotaAdaptador crearAdaptador(ArrayList<mascotas> mascotas) {
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascotas> mascotas) {
         MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,getActivity());
         return adaptador;
     }

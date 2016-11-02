@@ -4,7 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 
 import com.rots87.mascotas.R;
-import com.rots87.mascotas.Pojo.mascotas;
+import com.rots87.mascotas.pojo.Mascotas;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class ConstructorMascotas {
         this.context = context;
     }
 
-    public ArrayList<mascotas> obtenerDatos(){
+    public ArrayList<Mascotas> obtenerDatos(){
         BasedeDatos db = new BasedeDatos(context);
         insertarCincoMascotas(db); //Use solo cuando es la primera vez que ejecuta la app
         return db.obtenerTodasLasMascotas();
@@ -55,7 +55,7 @@ public class ConstructorMascotas {
 
     }
 
-    public void darLike(mascotas mascota){
+    public void darLike(Mascotas mascota){
         BasedeDatos db = new BasedeDatos(context);
         ContentValues contentValues = new ContentValues();
         contentValues.put(ConstantesDB.TABLE_MASCOTASLIKES_ID_CONTACTO,mascota.getId());
@@ -64,7 +64,7 @@ public class ConstructorMascotas {
 
     }
 
-    public int obtenerLikesMascotas(mascotas mascota){
+    public int obtenerLikesMascotas(Mascotas mascota){
         BasedeDatos db = new BasedeDatos(context);
         return  db.obtenerLikesMascotas(mascota);
     }
